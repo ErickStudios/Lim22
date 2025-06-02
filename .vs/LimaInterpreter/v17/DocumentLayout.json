@@ -1,16 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\LimaInterpreter\\",
+  "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|c:\\users\\erick\\onedrive\\erickcraftstudiosmgrchannel\\saved proyects\\lima-vscode\\ecslimaext454453\\limainterpreter\\limainterpreter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|c:\\users\\erick\\onedrive\\erickcraftstudiosmgrchannel\\saved proyects\\lima-vscode\\ecslimaext454453\\lim22\\limainterpreter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|solutionrelative:limainterpreter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|c:\\users\\erick\\onedrive\\erickcraftstudiosmgrchannel\\saved proyects\\lima-vscode\\ecslimaext454453\\lim22\\limainterpreter\\lima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|solutionrelative:limainterpreter\\lima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|c:\\users\\erick\\onedrive\\erickcraftstudiosmgrchannel\\saved proyects\\lima-vscode\\ecslimaext454453\\lim22\\limainterpreter\\makelima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|solutionrelative:limainterpreter\\makelima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\erick\\AppData\\Local\\Temp\\.vsdbgsrc\\9615b52a964ea4b0bdfaf38a01e60f6fd8a777d60f8bcc0c532727e562b4b074\\ArgumentOutOfRangeException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|c:\\users\\erick\\onedrive\\erickcraftstudiosmgrchannel\\saved proyects\\lima-vscode\\ecslimaext454453\\limainterpreter\\limainterpreter\\graphichsmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|c:\\users\\erick\\onedrive\\erickcraftstudiosmgrchannel\\saved proyects\\lima-vscode\\ecslimaext454453\\lim22\\limainterpreter\\graphichsmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|solutionrelative:limainterpreter\\graphichsmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -20,7 +28,7 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\erick\\AppData\\Local\\Temp\\.vsdbgsrc\\257e2f02f816864e3bc852612d29236c10e7df57ec5a892197ce3a5c6b14d963\\Number.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|c:\\users\\erick\\onedrive\\erickcraftstudiosmgrchannel\\saved proyects\\lima-vscode\\ecslimaext454453\\limainterpreter\\limainterpreter\\limainterpreter.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|c:\\users\\erick\\onedrive\\erickcraftstudiosmgrchannel\\saved proyects\\lima-vscode\\ecslimaext454453\\lim22\\limainterpreter\\limainterpreter.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{ED412EB7-46CE-4801-B796-859061B5F241}|LimaInterpreter\\LimaInterpreter.csproj|solutionrelative:limainterpreter\\limainterpreter.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
@@ -45,58 +53,82 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "graphichsMode.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\LimaInterpreter\\LimaInterpreter\\graphichsMode.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\graphichsMode.cs",
               "RelativeDocumentMoniker": "LimaInterpreter\\graphichsMode.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\LimaInterpreter\\LimaInterpreter\\graphichsMode.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\graphichsMode.cs",
               "RelativeToolTip": "LimaInterpreter\\graphichsMode.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAkwC0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T18:51:55.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T18:51:55.276Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\LimaInterpreter\\LimaInterpreter\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\Program.cs",
               "RelativeDocumentMoniker": "LimaInterpreter\\Program.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\LimaInterpreter\\LimaInterpreter\\Program.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\Program.cs",
               "RelativeToolTip": "LimaInterpreter\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFcDAAAAAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAAFwAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T18:57:33.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LimaInterpreter",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\LimaInterpreter\\LimaInterpreter\\LimaInterpreter.csproj",
-              "RelativeDocumentMoniker": "LimaInterpreter\\LimaInterpreter.csproj",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\LimaInterpreter\\LimaInterpreter\\LimaInterpreter.csproj",
-              "RelativeToolTip": "LimaInterpreter\\LimaInterpreter.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-02T18:47:03.804Z",
+              "DocumentIndex": 2,
+              "Title": "makelima.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\makelima.cs",
+              "RelativeDocumentMoniker": "LimaInterpreter\\makelima.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\makelima.cs",
+              "RelativeToolTip": "LimaInterpreter\\makelima.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T20:21:13.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Lima.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\Lima.cs",
+              "RelativeDocumentMoniker": "LimaInterpreter\\Lima.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\Lima.cs",
+              "RelativeToolTip": "LimaInterpreter\\Lima.cs",
+              "ViewState": "AQIAAEwCAAAAAAAAAAAqwEIDAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T20:43:32.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LimaInterpreter",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\LimaInterpreter.csproj",
+              "RelativeDocumentMoniker": "LimaInterpreter\\LimaInterpreter.csproj",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\LimaInterpreter.csproj",
+              "RelativeToolTip": "LimaInterpreter\\LimaInterpreter.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-02T18:47:03.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ArgumentOutOfRangeException.cs",
               "DocumentMoniker": "C:\\Users\\erick\\AppData\\Local\\Temp\\.vsdbgsrc\\9615b52a964ea4b0bdfaf38a01e60f6fd8a777d60f8bcc0c532727e562b4b074\\ArgumentOutOfRangeException.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\9615b52a964ea4b0bdfaf38a01e60f6fd8a777d60f8bcc0c532727e562b4b074\\ArgumentOutOfRangeException.cs",
               "ToolTip": "C:\\Users\\erick\\AppData\\Local\\Temp\\.vsdbgsrc\\9615b52a964ea4b0bdfaf38a01e60f6fd8a777d60f8bcc0c532727e562b4b074\\ArgumentOutOfRangeException.cs",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\9615b52a964ea4b0bdfaf38a01e60f6fd8a777d60f8bcc0c532727e562b4b074\\ArgumentOutOfRangeException.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAkwFoAAAACAAAA",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAkwFsAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T15:55:52.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "String.cs",
               "DocumentMoniker": "C:\\Users\\erick\\AppData\\Local\\Temp\\.vsdbgsrc\\e602f6d06c30bee89195cf62ea3341c7b6644f8dfbf1d4296c501f69250b60b8\\String.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\e602f6d06c30bee89195cf62ea3341c7b6644f8dfbf1d4296c501f69250b60b8\\String.cs",
@@ -104,12 +136,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\e602f6d06c30bee89195cf62ea3341c7b6644f8dfbf1d4296c501f69250b60b8\\String.cs",
               "ViewState": "AQIAALwLAAAAAAAAAAAkwMULAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T17:59:12.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T17:59:12.56Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Number.cs",
               "DocumentMoniker": "C:\\Users\\erick\\AppData\\Local\\Temp\\.vsdbgsrc\\257e2f02f816864e3bc852612d29236c10e7df57ec5a892197ce3a5c6b14d963\\Number.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\257e2f02f816864e3bc852612d29236c10e7df57ec5a892197ce3a5c6b14d963\\Number.cs",
@@ -117,12 +148,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\257e2f02f816864e3bc852612d29236c10e7df57ec5a892197ce3a5c6b14d963\\Number.cs",
               "ViewState": "AQIAAEkXAAAAAAAAAAAkwFIXAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T16:16:37.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T16:16:37.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ThrowHelper.cs",
               "DocumentMoniker": "C:\\Users\\erick\\AppData\\Local\\Temp\\.vsdbgsrc\\90793c3eb31d7122de8c9fc198b40ef620e753d16ec471ad4ebd91d387ca3092\\ThrowHelper.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\90793c3eb31d7122de8c9fc198b40ef620e753d16ec471ad4ebd91d387ca3092\\ThrowHelper.cs",
@@ -135,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Convert.cs",
               "DocumentMoniker": "C:\\Users\\erick\\AppData\\Local\\Temp\\.vsdbgsrc\\83ef037407976bee377a6bec344b74921525ff82563beb45bff16036354f1ce2\\Convert.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\83ef037407976bee377a6bec344b74921525ff82563beb45bff16036354f1ce2\\Convert.cs",
