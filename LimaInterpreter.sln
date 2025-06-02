@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LimaInterpreter", "LimaInterpreter\LimaInterpreter.csproj", "{ED412EB7-46CE-4801-B796-859061B5F241}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED412EB7-46CE-4801-B796-859061B5F241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED412EB7-46CE-4801-B796-859061B5F241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED412EB7-46CE-4801-B796-859061B5F241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED412EB7-46CE-4801-B796-859061B5F241}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAD4C296-3FDC-48DF-AE94-00A882968094}
+	EndGlobalSection
+EndGlobal

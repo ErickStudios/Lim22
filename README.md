@@ -1,2 +1,2 @@
 # Lim22
-the opensource version of lima
+a not-private opensource lima version code

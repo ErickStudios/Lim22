@@ -1,0 +1,42 @@
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.AssemblyInfoInputs.cache
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.AssemblyInfo.cs
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.csproj.CoreCompileInputs.cache
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.exe
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.deps.json
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.runtimeconfig.json
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.dll
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.pdb
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.dll
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\refint\LimaInterpreter.dll
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.pdb
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.genruntimeconfig.cache
+C:\Users\erick\source\repos\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\ref\LimaInterpreter.dll
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.AssemblyInfo.cs
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.dll
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\refint\LimaInterpreter.dll
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.pdb
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.exe
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.deps.json
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.runtimeconfig.json
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.dll
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.pdb
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.genruntimeconfig.cache
+C:\Users\erick\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\ref\LimaInterpreter.dll
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.exe
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.deps.json
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.runtimeconfig.json
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.dll
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\bin\Debug\net8.0\LimaInterpreter.pdb
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.AssemblyInfoInputs.cache
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.AssemblyInfo.cs
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.csproj.CoreCompileInputs.cache
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.dll
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\refint\LimaInterpreter.dll
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.pdb
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\LimaInterpreter.genruntimeconfig.cache
+C:\Users\Erick Antonio\OneDrive\ErickCraftStudiosMgrChannel\Saved Proyects\lima-vscode\ecslimaext454453\LimaInterpreter\LimaInterpreter\obj\Debug\net8.0\ref\LimaInterpreter.dll
