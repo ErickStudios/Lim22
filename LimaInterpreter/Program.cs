@@ -143,6 +143,16 @@ namespace TurbowarpPortedLima
                             compiler.WorkOn(line);
                         }
                     }
+                    else
+                    {
+                        if (
+                            makelima_mode == true
+                            )
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkCyan;
+
+                        }
+                    }
                 }
             }
         }

@@ -18,8 +18,8 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("LimaInterpreter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LimaInterpreter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("tvos0.0")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("tvos")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
 

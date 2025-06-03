@@ -111,13 +111,14 @@ namespace LimaInterpreter
                 string msg
             )
         {
-            for (int i = 0; i < segments.Count; i++)
+            KeyValuePair<int,string>[] rmseg = segments.ToArray();
+            for (int i = 0; i < rmseg.Length; i++)
             {
                 if (
-                    segments[i].Contains("[intersegmental]\nmessage " + msg)
+                    rmseg[i].Value.Contains("[intersegmental]\nmessage " + msg)
                     )
                 {
-                    string[] sr = segments[i].Split("[intersegmental]\nmessage " + msg);
+                    string[] sr = rmseg[i].Value.Split("[intersegmental]\nmessage " + msg);
 
                     string[] ara_ara = sr[1].Split("\n[endmsg]");
 
@@ -278,7 +279,62 @@ namespace LimaInterpreter
                 e == "ReadKeyWait"
                 )
             {
-                return Console.ReadKey(true).KeyChar.ToString();
+                ConsoleKeyInfo key = Console.ReadKey(true);
+
+                if
+                    (
+                    key.Key == ConsoleKey.UpArrow
+                    )
+                    return "up arrow";
+                
+
+
+                if
+                    (
+                    key.Key == ConsoleKey.DownArrow
+                    )
+                    return "down arrow";
+                
+
+
+                if
+                    (
+                    key.Key == ConsoleKey.LeftArrow
+                    )
+                    return "left arrow";
+                
+
+
+                if
+                    (
+                    key.Key == ConsoleKey.RightArrow
+                    )
+                    return "right arrow";
+                
+
+
+                if
+                    (
+                    key.Key == ConsoleKey.Tab
+                    )
+                    return "tab";
+                
+
+
+                if
+                    (
+                    key.Key == ConsoleKey.Escape
+                    )
+                    return "escape";
+                
+
+                if (
+                    key.Key == ConsoleKey.Enter
+                    )
+                    return "enter";
+                
+
+                return key.KeyChar.ToString();
             }
             else if (
                 e == "ReadLine"
@@ -608,6 +664,22 @@ namespace LimaInterpreter
                         (lines[Line_to_execute]).Trim() == "ustruct"
                     )
                 {
+                    string var_set = lines[Line_to_execute + 1].Trim();
+                    string structure = lines[Line_to_execute + 2].Trim();
+
+                    string[] struct_use = lima_variables[structure].Split("\n");
+
+                    foreach (var item in struct_use)
+                    {
+                        if (
+                            item.Contains("|")
+                            )
+                        {
+                            string[] value_key = item.Split("|");
+
+                            lima_variables[var_set + "->" + value_key[1]] = value_key[0];
+                        }
+                    }
                 }
                 else if (
                     (lines[Line_to_execute]).Trim() == "org"
@@ -672,7 +744,7 @@ namespace LimaInterpreter
                         }
 
                         if (
-                                                    LimaSyntax(if_condition, debug) != "false"
+                                                    LimaSyntax(if_condition, debug) == "true"
                                                     )
                         {
                             int popline = Line_to_execute;
@@ -771,6 +843,7 @@ namespace LimaInterpreter
                                 lines[section_search + 1].Trim() == lines[Line_to_execute + 1].Trim()
                                 )
                             {
+                                //Console.WriteLine(lines[section_search + 1].Trim());
                                 if (
                                     (lines[Line_to_execute]).Trim() == "jf"
                                     )
