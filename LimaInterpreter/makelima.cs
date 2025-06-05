@@ -172,7 +172,7 @@ partial class makelima_compiler
                     )
                     dependence_to_solve = lines[i + 1].Trim();
 
-                result = result.Replace("import\n" + lines[i + 1] + "\n;", GetFile(dependence_to_solve + ".lima"));
+                result = result.Replace("import\n" + lines[i + 1] + "\n;", ConvertLima(GetFile(dependence_to_solve + ".lima")));
             }
         }
 

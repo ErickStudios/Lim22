@@ -96,9 +96,11 @@ namespace TurbowarpPortedLima
                     Console.Write("@Lim22");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     Console.Write(" compiler\n");
+                    Thread.Sleep(50);
                 }
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Write("> ");
+                Thread.Sleep(50);
 
                 string line = Console.ReadLine();
 
