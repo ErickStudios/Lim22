@@ -1,23 +1,122 @@
 ﻿///
 /// Lima 2025
 ///
+/// cualquier robo del interprete o que hayan robado la idea sin mi permiso avisar al
+/// ErickCraftStudios@outlook.com, y si no pues, bueno , no te pasa nada por no avisarme pero
+/// de preferencia avisenme de esas cosas que me costo mucho hacer la logica
 /// 
-/// coppyright (c) ErickCraftStudios
-/// coppyright (c) ErickCraftStudios Markarian
+/// Coppyright (aun no de momento no esta registrado por ahora pero ya para avisarles con tiempo
+/// ) (C) ErickCraftStudios
+/// Coppyright (aun no de momento no esta registrado por ahora pero ya para avisarles con tiempo
+/// ) (C) ECS Markarian
+/// 
+/// 
+
 ///
+/// descripcion 
+///
+
+///
+/// 
+/// lima escrito por ErickCraftStudios y markarian
+/// 
+/// Lima es un lenguaje de programacion diseñado para adolesentes , niños , programadores de
+/// todo el mundo y mucho mas
+/// 
+/// Lima mantiene una sintaxis muy facil de recordar similar a C++, javascript y ensamblador
+/// aunque no se preocupen por lo de ensamblador, lima es facil hasta que quieres hacer
+/// algo tecnico ahi si , tendras que usar mov @eax, @bx @ax y comados del interprete (%^"!p")
+/// 
+/// por otro lado Lima++ es un componente de lima muy versatil pero dificil de manejar, sirve
+/// para cosas muy complejas como clases, metodos y cosas de la programacion orientada a
+/// objetos o POO para los amigos
+///
+
+
+
+///
+/// reglas de comunidad
+///
+
+///     
+///     
+///     1.Evita usar Lima para propaganda politica
+///
+///     2. Evita realizar cosas inapropiadas como contenido pornografico con Lima
+///
+///     3. Recuerda que puedes leer la documentacion!, aparte, en la paguina [Linuxchad] (< https://foro.linuxchad.org)> se encuentran algunos recursos
+///
+///     4.Se respetuoso a la hora de reportar algo
+///
+///     5. Evita "manchar" la reputacion de lima
+///
+///
+/// los desarrolladores de lima te mandan un abrazo y que te la pases genial con el lenguaje de progamacion ^-^
+/// 
+///
+
+///
+/// recuerda usar el interprete cuidadosamente, luego puede fallar con algunas cosas
+/// y no es mi culpa , trabajo solo , como quieres que no falle derrepente
+///
+
+///
+/// antes de usar
+/// 
+
+/// antes de usar lima debe tener los conocimientos previos
+/// *haber leido la documentacion sobre cosas tecnicas si vas a hacer eso
+/// 
+/// *saber usar vscode
+/// 
+/// *saber compilar programas, si usa linux debera portear el interprete a menos de que
+///  microsoft haga un compilador para linux
+///  
+///
+
+
+///
+/// preguntas frecuentes
+/// 
+
+///
+/// preguntas frecuentes, realmente no me pidieron mi opinion pero por cualquier cosa
+/// 
+/// ¿se puede hacer un sistema operativo en lima? si y no, si por que el lenguaje tiene funciones
+/// de bajo nivel y no por que es un interprete
+/// 
+/// ¿hiciste lima con alguien? bueno la verdad lo hice todo solo , aunque hay alguien que
+/// esta haciendo su propio interprete para linux es skale
+/// 
+/// "lima es una porqueria hecha por alguien que no deberia hacerlo", bueno la verdad siendo
+/// honestos, lima no es una poruqeria (tampoco lo mejor del mundo) pero es lo suficiente
+/// para varios programadores (pd: solo yo a la hora de escribir esto)
+/// 
+/// ¿hasta donde puede llegar lima? la verdad NO LO SE , solo se que ya he podido crear un
+/// firmware dentro de lima pero solo funciona en el interprete
+/// 
+/// ¿es lima opensource? si, se puede modificar y redistribuir y no se que mas con el codigo
+/// pero por favor no te adueñes del codigo, si lo vas a hacer dame creditos
+/// 
+/// 
+///
+
+///
+/// ahora si vamos con el archivo
 ///
 
 ///
 /// incluir los archivos
 ///
 
-using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;                                                   /// incluir el sistema
+using System.Linq;                                              /// linq
 
-using System.Drawing;
-using System.Collections.Generic;
+using System.Text;                                              /// incluir Text
+using System.Threading.Tasks;                                   /// incluir las tareas
+
+using System.Drawing;                                           /// para el cursor
+using System.Collections.Generic;                               /// incluir los diccionarios
 
 ///
 /// definir algunos alias
@@ -26,6 +125,9 @@ using System.Collections.Generic;
 using LimObj = string;      /// recuerden : aqui en lima no discriminamos a nadie, aqui una
                             /// variable es una variable, nada de que strings, int ,float,void
                             /// nada de eso
+
+using System.ComponentModel.Design;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 /// <summary>
 ///
@@ -38,6 +140,198 @@ using LimObj = string;      /// recuerden : aqui en lima no discriminamos a nadi
 /// hello.lima:
 ///     echo "Hello World"
 ///    
+/// 
+/// fat12.lima
+/// 
+/// # las llamadas al sistema de archivos
+///[intersegmental]
+///message fat12::action
+///
+///# verificar si queremos cargar el sistema de archivos
+///var
+///    .cnd
+///    =
+///    (@ScratchVar(_action)=="0x01")
+///
+///# si es verdad saltar a la accion 0
+///jt
+///    0
+///
+///__endprog__
+///
+///# 0 (load fs)
+///# 
+///# Resumen:
+///# 	cargar el sistema de archvios
+///# 
+///section
+///0
+///    # saltar al main del fs
+///    jump
+///    0.Main
+///
+///    # indicar que se estan cargando los archivos
+///    echo "loading files..."
+///
+///    # only vfat12 , the subdirs cant be load
+///
+///    # this loads the files of your real pc in the path where is the uefi executable and coppy it to the
+///    # Z hard disk
+///
+///    # Main
+///    # 
+///    # Resumen:
+///    # 	la copia
+///    # 
+///    # Params:
+///    # 	@(your files in the fd dir): para copiar al disco virtual
+///    #   @(obiusly your personal files if you want): pero es necesario para que puedas cargar los archivos
+///    # 
+///    section
+///    0.Main
+///        # nota : cualquier cambio hecho no se guardara por que hace una copia en memoria
+///        .
+///        var
+///            file_to_load
+///            =
+///            0
+///
+///        #
+///        # obtener los archivos en la carpeta actual
+///        #
+///
+///        mov
+///            @eax
+///            "/dir countf"
+///
+///        # enviar el comando
+///        %^"!p"
+///
+///        # establezer loa archivos maximos a cargar
+///        var
+///            max_files
+///            =
+///            @ScratchVar(_returned)
+///
+///        # ir al primer elemento del array (0)
+///        var
+///            max_files
+///            -=
+///            1
+///
+///        # ir a la accion
+///        jump
+///        0.load
+///
+///    __endprog__
+///
+///    # load
+///    # 
+///    # Resumen:
+///    # 	carga los archivos al sistema
+///    # 
+///    # Params:
+///    # 	@max_files: la cantidad maxima de archivos
+///    #   @file_to_load: el punto de entrada (la variable del archivo actual)
+///    # 
+///    section
+///    0.load
+///
+///        #
+///        # declarar las variables
+///        #
+///
+///        var
+///            name
+///            =
+///            prototype
+///
+///        var
+///            content
+///            =
+///            prototype
+///
+///        #
+///        # obtener la infformacion del archivo
+///        #
+///
+///        # nombre de archivo
+///
+///        # ajustar el comando a el comando para obtener el nombre
+///        mov
+///            @eax
+///            "/file_gName"
+///
+///        # el item del archivo
+///        mov
+///            @bx
+///            file_to_load
+///
+///        # mandar el comando
+///        %^"!p"
+///
+///        # hacer la copia
+///        var
+///            name
+///            =
+///            @ScratchVar(_returned)
+///
+///        # contenido del archivo
+///        
+///        # ajustar el comando a el comando para obtener el contenido
+///        mov
+///            @eax
+///            "/file_gContent"
+///
+///        # el item del archivo
+///        mov
+///            @bx
+///            file_to_load
+///
+///        # mandar el comando
+///        %^"!p"
+///
+///        # hacer una copia
+///        var
+///            content
+///            =
+///            @ScratchVar(_returned)
+///
+///        #
+///        # crear el archivo
+///        #
+///
+///        # ahora si crearlo
+///        movq
+///            "fs0->"(..)name
+///            content
+///
+///        #echo name(..)": "
+///        #echo content
+///
+///        # verificar el archivo y cual es
+///        #echo "file ""(..)name(..)"" has been loaded."
+///
+///        # ajustar la variable de condiciones para ver si supero los archivos maximos
+///        var
+///            .cnd
+///            =
+///            (file_to_load==max_files)
+///
+///        # siguiente archivo
+///        var
+///            file_to_load
+///            +=
+///            1
+///
+///        # si no lo supero cargar el siguiente archivo
+///        jf
+///            0.load
+///            # next file
+///
+///    # si ya se cargaron todos detener el proceso
+///    __endprog__
+///[endmsg]
 /// 
 /// 
 /// estructuras.lima
@@ -84,7 +378,7 @@ using LimObj = string;      /// recuerden : aqui en lima no discriminamos a nadi
 ///     ;
 /// 
 /// </summary>
-namespace LimaInterpreter
+namespace Lima_LimaPlusPlus_interpreter
 {
     /// <summary>
     /// 
@@ -92,7 +386,7 @@ namespace LimaInterpreter
     /// 
     /// The interpreter class
     /// of the languaje lima
-    ///
+    /// 
     /// </summary>
     class Lima
     {
@@ -112,15 +406,6 @@ namespace LimaInterpreter
         ///         
         /// </summary>
         public Dictionary<LimObj, LimObj> lima_variables    = new Dictionary<LimObj, LimObj>();
-
-        /// <summary>
-        /// 
-        /// gop
-        /// 
-        /// el sistema grafico
-        /// 
-        /// </summary>
-        public graphichsMode gop                            = new graphichsMode();
 
         /// <summary>
         /// 
@@ -155,7 +440,7 @@ namespace LimaInterpreter
         /// la pila (stack) para volver a un punto anterior con la instruccion popback
         /// 
         /// </summary>
-        public Dictionary<int, int> popback = new Dictionary<int, int>();
+        public Dictionary<int, int> popback                 = new Dictionary<int, int>();
 
         /// <summary>
         /// 
@@ -180,7 +465,147 @@ namespace LimaInterpreter
         ///     sendmw MiMensaje()
         /// 
         /// </summary>
-        public Dictionary<int, LimObj> segments = new Dictionary<int, LimObj>();
+        public Dictionary<int, LimObj> segments             = new Dictionary<int, LimObj>();
+
+        /// <summary>
+        /// 
+        /// LimaPlusPlus
+        /// 
+        /// el bool que verifica si estas usando lima++
+        /// 
+        /// </summary>
+        public bool LimaPlusPlus                            = false;
+
+        /// <summary>
+        /// 
+        /// !SOLO EN LIMA++!
+        /// 
+        /// HaveMain
+        /// 
+        /// si el programa tiene un punto main
+        /// 
+        /// </summary>
+        public bool HaveMain                                = false;
+
+        /// <summary>
+        /// 
+        /// MySefCode
+        /// 
+        /// donde se guarda el codigo que se esta corriendo
+        /// 
+        /// </summary>
+        public string MySefCode                             = "";
+
+        /// <summary>
+        /// 
+        /// !SOLO EN LIMA++!
+        /// 
+        /// ReturnedValue
+        /// 
+        /// el valor retornado desde un collection function
+        /// 
+        /// </summary>
+        public LimObj ReturnedValue                         = "";
+
+        /// <summary>
+        /// 
+        /// StringToColor
+        /// 
+        /// el parse que paseara lo que tiene que parsear
+        /// 
+        /// </summary>
+        public ConsoleColor
+            StringToColor
+            (
+                string color_code
+            )
+        {
+            ///
+            /// negro
+            ///
+            if (color_code == "0")return ConsoleColor.Black;
+
+            ///
+            /// azul oscuro
+            ///
+            if (color_code == "1")return ConsoleColor.DarkBlue;
+
+            ///
+            /// verde oscuro
+            ///
+            if (color_code == "2") return ConsoleColor.DarkGreen;
+
+            ///
+            /// cian oscuro
+            ///
+            if (color_code == "3") return ConsoleColor.DarkCyan;
+            
+            ///
+            /// rojo oscuro
+            ///
+            if (color_code == "4") return ConsoleColor.DarkRed; 
+
+            ///
+            /// magenta oscuro
+            ///
+            if (color_code == "5") return ConsoleColor.DarkMagenta;
+
+            ///
+            /// amarillo oscuro
+            ///
+            if (color_code == "6") return ConsoleColor.DarkYellow;
+
+            ///
+            /// gris
+            ///
+            if (color_code == "7") return ConsoleColor.Gray;
+
+            ///
+            /// gris oscuro
+            ///
+            if (color_code == "8") return ConsoleColor.DarkGray;
+
+            ///
+            /// azul
+            ///
+            if (color_code == "9") return ConsoleColor.Blue;
+
+            ///
+            /// verde
+            ///
+            if (color_code.ToUpper() == "A") return ConsoleColor.Green;
+
+            ///
+            /// cian
+            ///
+            if (color_code.ToUpper() == "B") return ConsoleColor.Cyan;
+
+            ///
+            /// rojo
+            ///
+            if (color_code.ToUpper() == "C") return ConsoleColor.Red;
+
+            ///
+            /// magenta
+            ///
+            if (color_code.ToUpper() == "D") return ConsoleColor.Magenta;
+
+            ///
+            /// amarillo
+            ///
+            if (color_code.ToUpper() == "E") return ConsoleColor.Yellow;
+
+            ///
+            /// blanco
+            ///
+            if (color_code.ToUpper() == "F") return ConsoleColor.White;
+
+            ///
+            /// si nada es igual (exactamente cuando te terminaron de un dia para
+            /// el otro) retornar gris
+            ///
+            return ConsoleColor.Gray;
+        }
 
         /// <summary>
         /// 
@@ -253,7 +678,7 @@ namespace LimaInterpreter
         ///     NULL
         ///     ReadKeyWait
         ///     ReadLine
-        ///     array(->)[item]
+        ///     instancia(->)accion
         ///     
         /// </summary>
         /// <param name="e">
@@ -393,6 +818,16 @@ namespace LimaInterpreter
             }
 
             ///
+            /// yo mismo
+            ///
+            else if (
+                e == "@myself"
+                )
+            {
+                return MySefCode;
+            }
+
+            ///
             /// obtener variable
             ///
             else if (
@@ -403,6 +838,21 @@ namespace LimaInterpreter
                 /// retornar el valor de la variable
                 ///
                 return lima_variables[e];
+            }
+
+            ///
+            /// obtencio de variables globales automaticamente (solo Lima++)
+            /// esto esta solo en Lima++ para mantener compatibilidad con la version de turbowarp
+            ///
+            else if
+                (
+                globvars.ContainsKey(e) && LimaPlusPlus
+                )
+            {
+                ///
+                /// retornar el valor de la variable global
+                ///
+                return globvars[e];
             }
 
             ///
@@ -767,69 +1217,219 @@ namespace LimaInterpreter
                     e.Contains("(->)")
                 )
             {
-                ///
-                /// dividirlo en valor y accion
-                ///
-                string[] split = e.Split("(->)");
-
-                ///
-                /// si se quiere obtener un item
-                ///
                 if (
-                    split[1].StartsWith("[") &&
-                    split[1].EndsWith("]")
+                    e.StartsWith("collection<")
                     )
                 {
-                    ///
-                    /// obtener el valor entre corchetes
-                    ///
-                    string item = split[1].Replace("[", "");
-                    item = item.Replace("]", "");
-
-                    ///
-                    /// obtener el array
-                    ///
-                    string[] array = lima_variables[split[0]].Replace("\r", "").Split("\n");
-
-                    ///
-                    /// verificar si la longitud es menor
-                    ///
-                    if (array.Length > Convert.ToInt32(LimaSyntax(item,debug)))
-
-                        ///
-                        /// retornarlo
-                        ///
-                        return array[Convert.ToInt32(LimaSyntax(item,debug))];
-
-                    ///
-                    /// si es cierto retornar NULL
-                    ///
-                    return "";
-                }
-                else if
-                    (
-                    split[1].StartsWith("StartsWith ") && split[1].Length > 11
-                    )
-                {
-                    ///
-                    /// obtener el statment
-                    ///
-                    LimObj statmente = split[1].Replace("StartsWith ", "");
-
-                    ///
-                    /// verificar si es true
-                    ///
-                    if (
-                        lima_variables[split[0]].StartsWith(LimaSyntax(statmente,debug))
-                        )
-                    {
-                        return "true";
+                    if
+                        (
+                        !LimaPlusPlus
+                        ) {
+                        return "you need Lima++ for this feature";
                     }
 
                     ///
-                    /// si no
+                    /// dividirlo en lima++ y accion
                     ///
-                    return "false";
+
+                    string[] split = e.Split("(->)");
+
+                    string parametres = (split[0].Substring(11, split[0].Length - 12));
+
+                    string[] paramsxd = parametres.Split(";");
+
+                    ///
+                    /// parse
+                    ///
+
+                    if (
+                        paramsxd[0] == "instance"
+                        )
+                    {
+                        ///
+                        /// verificar el tipo de instancia
+                        ///
+
+                        string[] instance_type = paramsxd[1].Split("?");
+
+                        if (
+                            instance_type[0] == "class"
+                            )
+                        {
+                            ///
+                            /// encontrar la class
+                            ///
+
+                            string class_find = instance_type[1] + "->class";
+
+                            ///
+                            /// el cuerpo de la funcion y de la class
+                            ///
+
+                            string class_body = lima_variables[class_find];
+
+                            string function_body = class_body.Split("collection<function " + paramsxd[3] + ">")[1];
+                            
+                            function_body = function_body.Split("collection<end function>")[0];
+
+                            ///
+                            /// descomponer attributos
+                            ///
+
+                            string[] attributes = split[1].Substring(1, split[1].Length - 2).Split(",");
+
+                            int attributes_cout = attributes.Length;
+
+                            ///
+                            /// parsear attributos
+                            ///
+
+                            string[] function_bod_lines = function_body.Replace("\r","").Split("\n");
+
+                            string[] function_params = new string[210];
+
+                            int attriubute_check = 0;
+                            int blocks_number = 0;
+                            int param_count = 0;
+
+                            while (
+                                true
+                                )
+                            {
+                                if (
+                                    function_bod_lines[attriubute_check].Trim() == ")"
+                                    )
+                                {
+                                    blocks_number -= 1;
+                                    if (
+                                        blocks_number == 0)
+                                        break;
+                                }
+                                else if (
+                                    function_bod_lines[attriubute_check].Trim() == "("
+                                    )
+                                {
+                                    blocks_number += 1;
+                                }
+                                else if (
+                                    function_bod_lines[attriubute_check].StartsWith("collection<param ")
+                                    )
+                                {
+                                    string paramm = function_bod_lines[attriubute_check].Substring(17, function_bod_lines[attriubute_check].Length - 18);
+
+                                    function_params[param_count] = paramm;
+
+                                    param_count++;
+                                }
+
+                                attriubute_check++;
+                            }
+
+                            ///
+                            /// renplazar los parametros y normalizar funcion
+                            ///
+
+                            for (int i = 0; i < param_count; i++)
+                            {
+                                function_body = function_body.Replace("collection<param " + function_params[i] + ">", attributes[i].Replace("%sp", " ").Replace("%cm",","));
+                            }
+
+                            //Console.WriteLine(function_body.Contains("collection<get __value>").ToString());
+
+                            function_body = function_body.Replace("collection<get __value>", paramsxd[2]);
+                            function_body = function_body.Replace("(this)", paramsxd[2]);
+
+                            ///
+                            /// recuperacion de variables
+                            ///
+                            int line_to = Line_to_execute;
+                            Dictionary<int, int> recover_popback = popback;
+
+                            ///
+                            /// ejecutar la funcion
+                            ///
+                            Line_to_execute = 0;
+                            ExecuteLimaScript(function_body, debug);
+
+                            ///
+                            /// recuperara los valores anteriores
+                            ///
+                            Line_to_execute = line_to + 1;
+
+                            popback = recover_popback;
+
+                            return ReturnedValue;
+
+                        }
+                    }
+                }
+                else
+                {
+
+                    ///
+                    /// dividirlo en valor y accion
+                    ///
+                    string[] split = e.Split("(->)");
+
+                    ///
+                    /// si se quiere obtener un item
+                    ///
+                    if (
+                        split[1].StartsWith("[") &&
+                        split[1].EndsWith("]")
+                        )
+                    {
+                        ///
+                        /// obtener el valor entre corchetes
+                        ///
+                        string item = split[1].Replace("[", "");
+                        item = item.Replace("]", "");
+
+                        ///
+                        /// obtener el array
+                        ///
+                        string[] array = lima_variables[split[0]].Replace("\r", "").Split("\n");
+
+                        ///
+                        /// verificar si la longitud es menor
+                        ///
+                        if (array.Length > Convert.ToInt32(LimaSyntax(item, debug)))
+
+                            ///
+                            /// retornarlo
+                            ///
+                            return array[Convert.ToInt32(LimaSyntax(item, debug))];
+
+                        ///
+                        /// si es cierto retornar NULL
+                        ///
+                        return "";
+                    }
+                    else if
+                        (
+                        split[1].StartsWith("StartsWith ") && split[1].Length > 11
+                        )
+                    {
+                        ///
+                        /// obtener el statment
+                        ///
+                        LimObj statmente = split[1].Replace("StartsWith ", "");
+
+                        ///
+                        /// verificar si es true
+                        ///
+                        if (
+                            lima_variables[split[0]].StartsWith(LimaSyntax(statmente, debug))
+                            )
+                        {
+                            return "true";
+                        }
+
+                        ///
+                        /// si no
+                        ///
+                        return "false";
+                    }
                 }
             }
 
@@ -837,6 +1437,37 @@ namespace LimaInterpreter
             /// si nada es valido devolver la sintaxis
             ///
             return e;
+        }
+
+        /// <summary>
+        /// 
+        /// VariablesSyntax
+        /// 
+        /// la sintaxis de las variables
+        /// 
+        /// ejemplos
+        ///     varnmae
+        ///     get -> sintaxis
+        /// 
+        /// </summary>
+        /// <param name="varname">
+        ///     el nombre de la variable o el statemiento
+        /// </param>
+        /// <returns></returns>
+        public string
+            VariablesSyntax
+            (
+            string varname
+            )
+        { 
+            if (
+                varname.StartsWith("get -> ")
+                )
+            {
+                return LimaSyntax(varname.Substring(7, varname.Length - 7), false);
+            }
+
+            return varname;
         }
 
         /// <summary>
@@ -855,7 +1486,7 @@ namespace LimaInterpreter
         /// <param name="debug">
         /// si estan depurando
         /// </param>
-        public async void
+        public void
             Execute
             (
             LimObj e,
@@ -941,6 +1572,14 @@ namespace LimaInterpreter
                 ///
                 Console.CursorLeft = oldx;
                 Console.CursorTop = oldy;
+            }
+
+            ///
+            /// prototipear modulos
+            ///
+            else if (e.StartsWith("proto module "))
+            {
+                lima_variables[e.Substring(13, e.Length - 13) + "->module"] = "";
             }
 
             ///
@@ -1059,7 +1698,7 @@ namespace LimaInterpreter
                     /// el array
                     ///
                     LimObj array = globvars["@ax"];
-                    
+
                     ///
                     /// separarlo en elementos
                     ///
@@ -1078,6 +1717,7 @@ namespace LimaInterpreter
                     globvars["@eax"] == "/get-url"
                     )
                 {
+                    /*
                     ///
                     /// obtener la url
                     ///
@@ -1108,8 +1748,89 @@ namespace LimaInterpreter
                         {
                         }
                     }
+                    */
                 }
 
+                ///
+                /// verificar si un array tiene un elemento
+                ///
+                else if (
+                    globvars["@eax"] == "/array ContainsValue"
+                    )
+                {
+                    if (
+                        globvars["@bx"].Contains(globvars["@ax"] + "\n")
+                        )
+                    {
+                        globvars["_returned"] = "true";
+                    }
+                    else
+                    {
+                        globvars["_returned"] = "false";
+                    }
+                }
+
+                ///
+                /// obtener la cantidad de entradas del array
+                ///
+                else if (
+                    globvars["@eax"] == "/array icount"
+                    )
+                {
+                    int count = globvars["@bx"].Split('\n').Length;
+
+                    globvars["_returned"] = count.ToString();
+                }
+
+                ///
+                /// añadir al array
+                ///
+                else if (
+                    globvars["@eax"] == "/array Add"
+                    )
+                {
+                    globvars["_returned"] += globvars["@bx"] + globvars["@ax"] + "\n";
+                }
+
+                ///
+                /// escribir un archivo
+                ///
+                else if (
+                    globvars["@eax"] == "/file_write"
+                    )
+                {
+                    string file_to_save = Path.Join(globvars["@dircurrent"], globvars["@bx"]);
+
+                    if (
+                        !File.Exists(file_to_save)
+                        )
+                    {
+                        File.Create(file_to_save);
+                    }
+
+                    File.WriteAllText(file_to_save, globvars["@ax"]);
+                }
+
+                ///
+                /// obtener el contenido de un archivo , por su nombre
+                ///
+
+                else if (
+                    globvars["@eax"] == "/file getconent -n"
+                    )
+                {
+                    string file_to_load = Path.Join(globvars["@dircurrent"], globvars["@bx"]);
+
+                    if (
+                        File.Exists(file_to_load))
+                    {
+                        globvars[ReturnedValue] = File.ReadAllText(file_to_load);
+                    }
+                    else
+                    {
+                        globvars[ReturnedValue] = "??wtf??";
+                    }
+                }
             }
 
             ///
@@ -1141,7 +1862,7 @@ namespace LimaInterpreter
                 /// ejecutar el mensaje
                 ///
                 Line_to_execute = 0;
-                ExecuteLimaScript(LimaSyntax(e.Substring(4, e.Length - 4),debug), debug);
+                ExecuteLimaScript(LimaSyntax(e.Substring(4, e.Length - 4), debug), debug);
 
                 ///
                 /// recuperara los valores anteriores
@@ -1187,6 +1908,38 @@ namespace LimaInterpreter
             }
 
             ///
+            /// para hacer un pitido
+            ///
+            else if (e.StartsWith("beep "))
+            {
+                ///
+                /// obtener los parametros
+                ///
+                LimObj er = e.Substring(5, e.Length - 5);
+
+                ///
+                /// obtener la lista
+                ///
+                LimObj[] colors = er.Split(" ");
+
+                ///
+                /// obtener el texto y el fondo
+                ///
+
+                LimObj freq = LimaSyntax(colors[0], debug);
+
+                LimObj duration = LimaSyntax(colors[1], debug);
+
+                ///
+                /// hacer un pitido
+                ///
+
+#if WINDOWS
+                Console.Beep(int.Parse(freq), int.Parse(duration));
+#endif
+            }
+
+            ///
             /// ir a una posicion
             ///
             else if (e.StartsWith("gotoxy "))
@@ -1216,7 +1969,6 @@ namespace LimaInterpreter
                 Console.SetCursorPosition(int.Parse(cursorx), int.Parse(cursory));
 
             }
-
 
             ///
             /// mandar un mensaje intersegmental
@@ -1270,6 +2022,18 @@ namespace LimaInterpreter
                 Thread.Sleep(int.Parse(LimaSyntax(e.Substring(6, e.Length - 6), debug)) * 1000);
             }
 
+            ///
+            /// syntax statment
+            ///
+            else if (
+                e.StartsWith("NULL ")
+                )
+            {
+                string ar = LimaSyntax(e.Substring(5,e.Length - 5),debug);
+
+                Console.Write(ar == "" ? ar : "");
+            }
+
             return;
         }
 
@@ -1285,6 +2049,10 @@ namespace LimaInterpreter
         ///     -=
         ///     *=
         ///     /=
+        ///     %=
+        ///     &=
+        ///     |=
+        ///     xor=
         /// 
         /// </summary>
         /// <param name="operator1"></param>
@@ -1407,6 +2175,41 @@ namespace LimaInterpreter
             }
 
             ///
+            /// modulo
+            ///
+            if (a == "%=")
+            {
+                return (int.Parse(operator1) % int.Parse(operator2)).ToString();
+            }
+
+            ///
+            /// and
+            ///
+            if (a == "&=")
+            {
+                return (int.Parse(operator1) & int.Parse(operator2)).ToString();
+            }
+
+
+            ///
+            /// or
+            ///
+            if (a == "|=")
+            {
+                return (int.Parse(operator1) | int.Parse(operator2)).ToString();
+            }
+
+
+            ///
+            /// xor
+            ///
+            if (a == "xor=")
+            {
+                return (int.Parse(operator1) ^ int.Parse(operator2)).ToString();
+            }
+
+
+            ///
             /// si nada es cierto , retornar el operador2 como ultimo recurso
             ///
             return operator2;
@@ -1419,16 +2222,29 @@ namespace LimaInterpreter
         /// el centro de todo , la ejecucion del script
         /// 
         /// </summary>
-        /// <param name="lscript"></param>
-        /// <param name="debug"></param>
-        public async void
+        /// <param name="lscript">
+        /// 
+        /// lscript
+        /// 
+        /// representa el script que se esta ejecutando sin formatear, luego se les quita
+        /// los molesto R hijos de su-
+        /// 
+        /// </param>
+        /// <param name="debug">
+        /// 
+        /// debug
+        /// 
+        /// si el depurador esta activado durante la ejecucion del script
+        /// 
+        /// </param>
+        public void
         ExecuteLimaScript
         (
             string lscript,
             bool debug
         )
         {
-            ///
+            /// 
             /// si esta en una estructura
             ///
             bool in_struct;
@@ -1437,6 +2253,12 @@ namespace LimaInterpreter
             /// quitar el char carrige que lo unico que hace aqui es molestar
             ///
             string script = lscript.Replace("\r", "");
+
+            ///
+            /// guardar el codigo
+            ///
+
+            MySefCode = script;
 
             ///
             /// separa el script en lineas
@@ -1540,6 +2362,219 @@ namespace LimaInterpreter
                 }
 
                 ///
+                /// expandir modulos
+                ///
+                else if
+                    (
+                    lines[Line_to_execute].Trim().StartsWith("expand module ")
+                    )
+                {
+                    string module = lines[Line_to_execute].Trim().Substring(14, lines[Line_to_execute].Trim().Length - 14);
+                    string linesa = "";
+
+                    Line_to_execute += 2;
+
+                    int blocks = 1;
+
+                    while (blocks != 0)
+                    {
+                        linesa += lines[Line_to_execute] + "\n";
+
+                        if (
+                            lines[Line_to_execute].Trim() == "{"
+                            )
+                        {
+                            blocks++;
+                        }
+                        else if (
+                            lines[Line_to_execute].Trim() == "}"
+                            )
+                        {
+                            blocks--;
+                        }
+                        Line_to_execute++;
+                    }
+
+                    lima_variables[module + "->module"] += linesa;
+                }
+
+                ///
+                /// comentarios de varias lineas de Lima++
+                ///
+                else if (
+                        lines[Line_to_execute].Trim().StartsWith("/**")
+                    )
+                {
+                    if (
+                        !lines[Line_to_execute].EndsWith("**/")
+                        )
+                    {
+                        while (!lines[Line_to_execute].EndsWith("**/"))
+                        {
+                            Line_to_execute++;
+                        }
+                    }
+                }
+
+                ///
+                /// las caracterizticas de Lima++
+                ///
+                else if
+                    (
+                        lines[Line_to_execute].Trim().StartsWith("collection")
+                    )
+                {
+                    ///
+                    /// configurar variables
+                    ///
+
+                    string mmmnk = lines[Line_to_execute].Trim();
+                    string parameters = mmmnk.Substring(11, mmmnk.Length - 12);
+
+                    ///
+                    /// manejar parametros
+                    ///
+                    string[] paramsxd = parameters.Split(" ");
+
+                    if (
+                        LimaPlusPlus
+                        )
+                    {
+                        ///
+                        /// clases
+                        ///
+                        if (
+                            paramsxd[0] == "class"
+                            )
+                        {
+                            ///
+                            /// configurar clase
+                            ///
+
+                            string class_name = paramsxd[1];
+                            string class_body = "";
+                            int blocks_number = 0;
+
+                            ///
+                            /// a la accion
+                            ///
+
+                            Line_to_execute += 2;
+                            blocks_number = 1;
+                            while (blocks_number != 0)
+                            {
+                                if (
+                                    lines[Line_to_execute].Trim() == "{"
+                                    )
+                                    blocks_number++;
+
+                                if (
+                                    lines[Line_to_execute].Trim() == "}"
+                                    ) {
+                                    blocks_number--;
+                                    break;
+                                        }
+
+                                class_body += lines[Line_to_execute].Trim() + "\n";
+
+                                Line_to_execute++;
+
+                            }
+
+                            lima_variables[class_name + "->class"] = class_body;
+
+                            Line_to_execute++;
+
+                        }
+                        
+                        ///
+                        /// palabra new
+                        ///
+                        else if (
+                            paramsxd[0] == "new"
+                            )
+                        {
+                            ///
+                            /// parsear palabras
+                            ///
+
+                            string instancex = paramsxd[1];
+                            string[] instance_body = instancex.Split("?");
+
+                            ///
+                            /// verificar que cuerpo se quiere definir
+                            ///
+
+                            ///
+                            /// instancear una clase
+                            ///
+                            if (
+                                instance_body[0] == "class"
+                                )
+                            {
+                                string class_name = instance_body[1];
+
+                                string class_solved = lima_variables[class_name + "->class"];
+
+                                string instance_name = paramsxd[2];
+
+                                if (
+                                    lines[Line_to_execute + 1].Trim() == "="
+                                    ) {
+                                    lima_variables[instance_name + "->class_functions"] = class_solved;
+                                    lima_variables[instance_name] = LimaSyntax(lines[Line_to_execute + 2].Trim(), debug);
+                                }
+                                else if (
+                                    lines[Line_to_execute + 1].Trim() == "X="
+                                    )
+                                {
+                                    lima_variables[instance_name + "->class_functions"] = LimaSyntax("NULL",debug);
+                                    lima_variables[instance_name] = LimaSyntax("NULL", debug);
+                                }
+
+                            }
+                        }
+
+                        ///
+                        /// retorno
+                        ///
+
+                        else if (
+                            paramsxd[0] == "return"
+                            )
+                        {
+                            ReturnedValue = LimaSyntax(paramsxd[1], debug);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("you need Lima++ to use collection");
+                    }
+
+                }
+
+                ///
+                /// propiedades del script
+                ///
+                else if (
+                    lines[Line_to_execute].Trim().StartsWith("///! ")
+                    )
+                {
+                    string propiety = lines[Line_to_execute].Trim().Substring(5, lines[Line_to_execute].Trim().Length - 5);
+                    
+                    if (
+                        propiety.Trim() == "![enable Lima++]"
+                        )
+                        LimaPlusPlus = true;
+
+                    if (
+                        propiety.Trim() == "![disable Lima++]"
+                        )
+                        LimaPlusPlus = false;
+                }
+
+                ///
                 /// establezer de valor con valor
                 ///
                 else if (
@@ -1598,6 +2633,8 @@ namespace LimaInterpreter
                                 ///
                                 /// ajustar el nombre de la estructura
                                 ///
+                                //Console.WriteLine(var_set + "->" + value_key[1]);
+                                //Console.WriteLine(LimaSyntax(value_key[0], debug));
                                 lima_variables[var_set + "->" + value_key[1]] = LimaSyntax(value_key[0], debug);
                             }
                         }
@@ -1808,8 +2845,8 @@ namespace LimaInterpreter
                         (lines[Line_to_execute - 1]).Trim() == "[globalize]"
                         )
                     {
-                        globvars[name] = Operate_With(
-                            globvars.ContainsKey(name) ? globvars[name] : "",
+                        globvars[VariablesSyntax(name)] = Operate_With(
+                            globvars.ContainsKey(VariablesSyntax(name)) ? globvars[VariablesSyntax(name)] : "",
                             op,
                             LimaSyntax(value, debug)
                             );
@@ -1820,8 +2857,8 @@ namespace LimaInterpreter
                     ///
                     else
                     {
-                        lima_variables[name] = Operate_With(
-                            lima_variables.ContainsKey(name) ? lima_variables[name] : "",
+                        lima_variables[VariablesSyntax(name)] = Operate_With(
+                            lima_variables.ContainsKey(VariablesSyntax(name)) ? lima_variables[VariablesSyntax(name)] : "",
                             op,
                             LimaSyntax(value, debug)
                             );
@@ -1963,3 +3000,25 @@ namespace LimaInterpreter
     }
 
 }
+
+/// creditos
+///
+/// aqui aparecen los creditos de lima
+/// contribuidores, escritores , managers, y creditos de ejemplo0s
+/// 
+/// escrito por:
+///     Erick Antonio Nava Camarillo
+///     
+/// 
+/// manejado por:
+///     Erick Antonio Nava Camarillo
+///     
+/// 
+/// contribuidores:
+///     Skale -> esta haciendo su propio interprete de lima, OpenLima
+///     la comunidad de lima ^-^
+///    
+/// 
+/// ejemplos escritos por:
+///     Erick Antonio Nava Camarillo
+///     

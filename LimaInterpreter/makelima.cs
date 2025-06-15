@@ -109,6 +109,18 @@ partial class makelima_compiler
         return result;
     }
 
+        public string
+                TypedefSyntax(
+                string name
+            )
+        {
+            string result = name;
+
+            result = result.Replace("\\N ", "\n");
+
+            return result;
+        }
+
     ///!
     ///!
     ///! ConvertLima
@@ -152,22 +164,23 @@ partial class makelima_compiler
         for (int i = 0; i < lines.Length; i++)
         {
             if (
-                lines[i].Trim().StartsWith("#")
-                )
-            {
-                result = result.Replace(lines[i] + "\n", "");
-            }
-            else if (
                   lines[i].Trim() == ""
                 )
             {
                 result = result.Replace("\n" + lines[i] + "\n", "\n");
             }
             else if (
+                    lines[i].Trim() == "typedef"
+                    )
+                {
+                    result = result.Replace(lines[i + 2].Trim(), TypedefSyntax(lines[i + 1].Trim()));
+                    result = result.Replace("typedef\n" + lines[i + 1] + "\n" + lines[i + 2] + "\n","\n");
+                }
+            else if (
                 lines[i].Trim() == "import"
                 )
             {
-                if (
+            if (
                     lines[i + 2].Trim() == ";"
                     )
                     dependence_to_solve = lines[i + 1].Trim();
@@ -272,25 +285,25 @@ partial class makelima_compiler
             string[] args = c.Split(" -> ");
 
             if (
-                Path.Exists(Path.Join(worckspace, makelima_sintax(args[0])).Replace("/", "\\"))
+                Path.Exists(Path.Join(worckspace, makelima_sintax(args[0])).Replace("/", Path.DirectorySeparatorChar.ToString()))
                 )
             {
                 for (
                     global::System.Int32 i = 0;
-                    i < Directory.GetFiles(Path.Join(worckspace, makelima_sintax(args[0])).Replace("/", "\\")).Length;
+                    i < Directory.GetFiles(Path.Join(worckspace, makelima_sintax(args[0])).Replace("/", Path.DirectorySeparatorChar.ToString())).Length;
                     i++
                     )
                 {
                     string cm = args[1];
 
-                    string[] erre = Directory.GetFiles(Path.Join(worckspace, makelima_sintax(args[0])).Replace("/", "\\"));
+                    string[] erre = Directory.GetFiles(Path.Join(worckspace, makelima_sintax(args[0])).Replace("/", Path.DirectorySeparatorChar.ToString()));
 
                     for (int j = 2; j < args.Length; j++)
                     {
                         cm += " -> " + args[j];
                     }
 
-                    string elñe = erre[i].Replace(worckspace, "").Replace("\\", "/");
+                    string elñe = erre[i].Replace(worckspace, "").Replace(Path.DirectorySeparatorChar.ToString(), "/");
 
                     cm = cm.Replace("%file", elñe);
 

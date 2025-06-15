@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "b+tJKK+R9Us=",
+  "dgSpecHash": "c7xjfhv7Wrc=",
   "success": true,
   "projectFilePath": "C:\\Users\\erick\\OneDrive\\ErickCraftStudiosMgrChannel\\Saved Proyects\\lima-vscode\\ecslimaext454453\\Lim22\\LimaInterpreter\\LimaInterpreter.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\erick\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\8.0.6\\microsoft.netcore.app.runtime.linux-x64.8.0.6.nupkg.sha512",
+    "C:\\Users\\erick\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.6\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.6.nupkg.sha512",
+    "C:\\Users\\erick\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.6\\microsoft.netcore.app.host.linux-x64.8.0.6.nupkg.sha512"
+  ],
   "logs": []
 }
