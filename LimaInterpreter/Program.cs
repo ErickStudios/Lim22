@@ -419,9 +419,11 @@ namespace TurbowarpPortedLima
                             makelima_mode == false
                             )
                         {
-                            string path = line.Substring(0, line.LastIndexOf("\\"));
+                            string path = line.Contains(Path.PathSeparator) ? line.Substring(0, line.LastIndexOf(Path.PathSeparator)) : AppDomain.CurrentDomain.BaseDirectory;
 
                             lima.globvars["@dircurrent"] = path;
+
+                            lima.globvars["@name"] = line;
 
 #if !DEBUG
                             try

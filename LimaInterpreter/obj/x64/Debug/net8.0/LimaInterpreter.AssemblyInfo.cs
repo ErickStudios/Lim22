@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LimaInterpreter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fcc946e3ff26fa5b7d4338a80cbfd41d807030d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d700fe50a928317313eab2807c003d59cc8ac27a")]
 [assembly: System.Reflection.AssemblyProductAttribute("LimaInterpreter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LimaInterpreter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

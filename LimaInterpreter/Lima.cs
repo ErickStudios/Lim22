@@ -109,25 +109,34 @@
 /// incluir los archivos
 ///
 
-using System;                                                   /// incluir el sistema
-using System.Linq;                                              /// linq
+using System;                                                   
+/// incluir el sistema
+using System.Linq;                                              
+/// linq
 
-using System.Text;                                              /// incluir Text
-using System.Threading.Tasks;                                   /// incluir las tareas
+using System.Text;                                              
+/// incluir Text
+using System.Threading.Tasks;                                   
+/// incluir las tareas
 
-using System.Drawing;                                           /// para el cursor
-using System.Collections.Generic;                               /// incluir los diccionarios
+using System.Drawing;                                           
+/// para el cursor
+using System.Collections.Generic;                               
+/// incluir los diccionarios
 
 ///
 /// definir algunos alias
 ///
 
-using LimObj = string;      /// recuerden : aqui en lima no discriminamos a nadie, aqui una
+using LimObj = string;      
+/// recuerden : aqui en lima no discriminamos a nadie, aqui una
                             /// variable es una variable, nada de que strings, int ,float,void
                             /// nada de eso
 
 using System.ComponentModel.Design;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Net;
+using System.Diagnostics;
+using System.Security.Cryptography;
 
 /// <summary>
 ///
@@ -405,7 +414,7 @@ namespace Lima_LimaPlusPlus_interpreter
         ///         10
         ///         
         /// </summary>
-        public Dictionary<LimObj, LimObj> lima_variables    = new Dictionary<LimObj, LimObj>();
+        public Dictionary<LimObj, LimObj> lima_variables        = new Dictionary<LimObj, LimObj>();
 
         /// <summary>
         /// 
@@ -421,7 +430,7 @@ namespace Lima_LimaPlusPlus_interpreter
         ///         10
         ///         
         /// </summary>
-        public Dictionary<LimObj, LimObj> globvars          = new Dictionary<LimObj, LimObj>();
+        public Dictionary<LimObj, LimObj> globvars              = new Dictionary<LimObj, LimObj>();
 
         /// <summary>
         /// 
@@ -431,7 +440,7 @@ namespace Lima_LimaPlusPlus_interpreter
         /// importante para la ejecucion del script
         /// 
         /// </summary>
-        public int Line_to_execute                          = 0; 
+        public int Line_to_execute                              = 0;
 
         /// <summary>
         /// 
@@ -440,7 +449,7 @@ namespace Lima_LimaPlusPlus_interpreter
         /// la pila (stack) para volver a un punto anterior con la instruccion popback
         /// 
         /// </summary>
-        public Dictionary<int, int> popback                 = new Dictionary<int, int>();
+        public Dictionary<int, int> popback                     = new Dictionary<int, int>();
 
         /// <summary>
         /// 
@@ -465,7 +474,7 @@ namespace Lima_LimaPlusPlus_interpreter
         ///     sendmw MiMensaje()
         /// 
         /// </summary>
-        public Dictionary<int, LimObj> segments             = new Dictionary<int, LimObj>();
+        public Dictionary<int, LimObj> segments                 = new Dictionary<int, LimObj>();
 
         /// <summary>
         /// 
@@ -474,7 +483,7 @@ namespace Lima_LimaPlusPlus_interpreter
         /// el bool que verifica si estas usando lima++
         /// 
         /// </summary>
-        public bool LimaPlusPlus                            = false;
+        public bool LimaPlusPlus                                = false;
 
         /// <summary>
         /// 
@@ -485,7 +494,7 @@ namespace Lima_LimaPlusPlus_interpreter
         /// si el programa tiene un punto main
         /// 
         /// </summary>
-        public bool HaveMain                                = false;
+        public bool HaveMain                                    = false;
 
         /// <summary>
         /// 
@@ -494,7 +503,7 @@ namespace Lima_LimaPlusPlus_interpreter
         /// donde se guarda el codigo que se esta corriendo
         /// 
         /// </summary>
-        public string MySefCode                             = "";
+        public string MySefCode                                 = "";
 
         /// <summary>
         /// 
@@ -505,7 +514,96 @@ namespace Lima_LimaPlusPlus_interpreter
         /// el valor retornado desde un collection function
         /// 
         /// </summary>
-        public LimObj ReturnedValue                         = "";
+        public LimObj ReturnedValue                             = "";
+        
+        /// <summary>
+        /// 
+        /// BoolToLimaBool
+        /// 
+        /// convierte un booleano normal en uno de lima
+        /// 
+        /// </summary>
+        /// <param name="boolean"></param>
+        /// <returns></returns>
+        public string
+            BoolToLimaBool
+            (
+            bool boolean
+            )
+        {
+            if (boolean) return "true";
+            else return "false";
+        }
+
+        /// <summary>
+        /// 
+        /// NoramlizeString
+        /// 
+        /// normalizar una cadena, esto es por que antes si ponia \n en un string en lima
+        /// literalmente no se intepretaba el escape
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        public string
+            NoramlizeString
+            (
+            string e
+            )
+        {
+            string result = "";
+
+            for (int i = 0; i < e.Length - 1; i++)
+            {
+                if (
+                    e[i] == '\\'
+                    )
+                {
+                    switch (e[i + 1])
+                    {
+                        case 'n':
+                            result += "\n";
+                            break;
+                        case 'r':
+                            result += "\r";
+                            break;
+                        case 'a':
+                            result += "\a";
+                            break;
+                        case 'b':
+                            result += "\b";
+                            break;
+                        case 'f':
+                            result += "\f";
+                            break;
+                        case 't':
+                            result += "\t";
+                            break;
+                        case 'v':
+                            result += "\v";
+                            break;
+                        case '\\':
+                            result += "\\";
+                            break;
+                        case '"':
+                            result += "\"";
+                            break;
+                        default:
+                            result += "?";
+                            break;
+                    }
+
+                    i++;
+                }
+                else
+                {
+                    result += e[i].ToString();
+                }
+               
+            }
+
+            return result;
+        }
 
         /// <summary>
         /// 
@@ -660,6 +758,70 @@ namespace Lima_LimaPlusPlus_interpreter
             return "";
         }
 
+        public bool
+            IsANumber
+            (
+            string text
+            )
+        {
+            foreach (var e in text.ToCharArray())
+            {
+                if (
+                    e == '-' || e == '0' || e == '1' || e == '2' || e == '3' ||
+                    e == '4' || e == '5' || e == '6' || e == '7' || e == '8' ||
+                    e == '9'
+                    )
+                {
+
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// 
+        /// Typeofsyntax
+        /// 
+        /// verificar el tipo de texto que es
+        /// 
+        /// </summary>
+        /// <param name="syntax"></param>
+        /// <returns></returns>
+        public string
+            Typeofsyntax
+            (
+            string syntax
+            )
+        {
+            if (
+                syntax == ""
+                )
+            {
+                return "any";
+            }
+
+            else if (
+                IsANumber(syntax)
+                )
+            {
+                return "number";
+            }
+
+            else if (
+                syntax == "true" || syntax == "false"
+                )
+            {
+                return "boolean";
+            }
+
+            return "text";
+        }
+
         /// <summary>
         /// 
         /// LimaSyntax
@@ -721,6 +883,27 @@ namespace Lima_LimaPlusPlus_interpreter
                 /// retornar el valor
                 return syntax;
             }
+
+            ///
+            /// salto de linea
+            ///
+            else if (
+                e == "%internal.linefeed"
+                )
+            {
+                return "\n";
+            }
+
+            ///
+            /// salto de linea
+            ///
+            else if (
+                e == "%internal.carrige"
+                )
+            {
+                return "\r";
+            }
+
             ///
             /// condicionales
             ///
@@ -1430,6 +1613,52 @@ namespace Lima_LimaPlusPlus_interpreter
                         ///
                         return "false";
                     }
+                    else if (
+                        split[1] == "trim"
+                        )
+                    {
+                        return lima_variables[split[0]].Trim();
+                    }
+                    else if (
+                        split[1].StartsWith("split ") && split[1].Length > 6
+                        )
+                    {
+                        LimObj statmente = split[1].Replace("split ", "");
+
+                        return lima_variables[split[0]].Replace(LimaSyntax(statmente,debug),"\n");
+                    }
+                    else if
+                        (
+                        split[1].StartsWith("EndsWith ") && split[1].Length > 9
+                        )
+                    {
+                        ///
+                        /// obtener el statment
+                        ///
+                        LimObj statmente = split[1].Replace("EndsWith ", "");
+
+                        ///
+                        /// verificar si es true
+                        ///
+                        if (
+                            lima_variables[split[0]].EndsWith(LimaSyntax(statmente, debug))
+                            )
+                        {
+                            return "true";
+                        }
+
+                        ///
+                        /// si no
+                        ///
+                        return "false";
+                    }
+                    else if (
+                        split[1] == "items_count"
+                        )
+                    {
+                        if (!lima_variables[split[0]].Replace("\r", "").Contains("\n")) return "0";
+                        return lima_variables[split[0]].Replace("\r", "").Split("\n").Length.ToString();
+                    }
                 }
             }
 
@@ -1448,6 +1677,8 @@ namespace Lima_LimaPlusPlus_interpreter
         /// ejemplos
         ///     varnmae
         ///     get -> sintaxis
+        ///     *puntero
+        ///     *puntero(+)modificador
         /// 
         /// </summary>
         /// <param name="varname">
@@ -1465,6 +1696,42 @@ namespace Lima_LimaPlusPlus_interpreter
                 )
             {
                 return LimaSyntax(varname.Substring(7, varname.Length - 7), false);
+            }
+
+            ///
+            /// punteros (porteado desde LimaTurbowarp)
+            ///
+            else if (
+                varname.StartsWith("*")
+                )
+            {
+                ///
+                /// si es un puntero normal
+                ///
+                if (
+                    !varname.Contains("(+)")
+                    )
+                {
+                    return LimaSyntax(varname.Substring(1, varname.Length - 1), false);
+                }
+
+                ///
+                /// si es un puntero dinamico
+                ///
+
+                else
+                {
+                    ///
+                    /// configurar variables
+                    ///
+                    string puntero = varname.Substring(1, varname.Length - 1);
+                    string[] split = puntero.Split("(+)");
+
+                    ///
+                    /// localizar puntero
+                    ///
+                    return LimaSyntax(split[0], false) + LimaSyntax(split[1], false);
+                }
             }
 
             return varname;
@@ -1616,6 +1883,121 @@ namespace Lima_LimaPlusPlus_interpreter
                 }
 
                 ///
+                /// combinar una carpeta
+                ///
+                if (
+                    globvars["@eax"] == "/path join"
+                    )
+                {
+                    globvars["_returned"] = Path.Join(globvars["@bx"], globvars["@ax"]);
+                }
+
+                ///
+                /// montar una pagina web en host
+                ///
+                else if (
+                    globvars["@eax"] == "/net mount"
+                    )
+                {
+                    ///
+                    /// configurar vairbles
+                    ///
+                   
+                    string port = globvars["@bx"];
+                    string content = globvars["@ax"];
+
+                    HttpListener listener = new HttpListener();
+                    string url = $"http://localhost:{port}/";
+
+                    ///
+                    /// intentarlo
+                    ///
+                    try
+                    {
+                        ///
+                        /// montar la pagina
+                        ///
+                        listener.Prefixes.Add(url);
+                        listener.Start();
+
+                        ///
+                        /// ejecutarlo
+                        ///
+                        Task.Run(() =>
+                        {
+                            ///
+                            /// mientras se esta oyendo
+                            ///
+                            while (listener.IsListening)
+                            {
+                                ///
+                                /// configurar
+                                ///
+                                var context = listener.GetContext();
+                                context.Response.ContentType = "text/html";
+
+                                ///
+                                /// escribirlo
+                                ///
+                                using (var writer = new StreamWriter(context.Response.OutputStream))
+                                {
+                                    writer.Write(content);
+                                }
+                                context.Response.Close();
+                            }
+                        });
+
+                        globvars["_returned"] = $"mounted in: {url}";
+                    }
+                    catch (Exception ex)
+                    {
+                        globvars["_returned"] = $"error in open the page: {ex.Message}";
+                    }
+
+
+                }
+
+                ///
+                /// obtener el contenido de una pagina web
+                ///
+                else if (
+                    globvars["@eax"] == "/net get"
+                    )
+                {
+
+                    ///
+                    /// obtener la url
+                    ///
+                    LimObj url = globvars["@bx"];
+
+                    ///
+                    /// intentar obtener datos
+                    ///
+                    using (HttpClient client = new HttpClient())
+                    {
+                        try
+                        {
+                            /// Enviar una solicitud GET y obtener la respuesta
+                            HttpResponseMessage response = client.GetAsync(url).Result;
+
+                            /// Asegurarse de que la solicitud fue exitosa
+                            response.EnsureSuccessStatusCode();
+
+                            /// Leer el contenido de la respuesta como una cadena
+                            LimObj content = response.Content.ReadAsStringAsync().Result;
+
+                            ///
+                            /// retornar el valor
+                            ///
+                            globvars["_returned"] = content;
+                        }
+                        catch (Exception ex)
+                        {
+                        }
+                    }
+                }
+
+                ///
                 /// obtener todas las variables que inicen con
                 ///
                 else if (
@@ -1652,7 +2034,7 @@ namespace Lima_LimaPlusPlus_interpreter
                     /// obtener los archivos
                     ///
                     IEnumerable<LimObj> names = Directory.EnumerateFiles(globvars["@dircurrent"]);
-
+                    
                     ///
                     /// obenere el array normalizado
                     ///
@@ -1819,7 +2201,7 @@ namespace Lima_LimaPlusPlus_interpreter
                     globvars["@eax"] == "/file getconent -n"
                     )
                 {
-                    string file_to_load = Path.Join(globvars["@dircurrent"], globvars["@bx"]);
+                    string file_to_load = Path.Join(AppDomain.CurrentDomain.BaseDirectory, globvars["@bx"]);
 
                     if (
                         File.Exists(file_to_load))
@@ -2034,6 +2416,27 @@ namespace Lima_LimaPlusPlus_interpreter
                 Console.Write(ar == "" ? ar : "");
             }
 
+            ///
+            /// mkdir
+            ///
+            else if (
+                e.StartsWith("mkdir ")
+                )
+            {
+                string dir = LimaSyntax(e.Substring(6,e.Length - 6),debug);
+
+                if (
+                    !Directory.Exists(Path.Join(AppDomain.CurrentDomain.BaseDirectory, dir))
+                    )
+                {
+                    Directory.CreateDirectory(Path.Join(AppDomain.CurrentDomain.BaseDirectory, dir));
+                }
+                else
+                {
+                    globvars[ReturnedValue] = "Unsucces";
+                }
+            }
+
             return;
         }
 
@@ -2053,6 +2456,7 @@ namespace Lima_LimaPlusPlus_interpreter
         ///     &=
         ///     |=
         ///     xor=
+        ///     ++^^
         /// 
         /// </summary>
         /// <param name="operator1"></param>
@@ -2065,7 +2469,6 @@ namespace Lima_LimaPlusPlus_interpreter
                 LimObj operator1,
                 LimObj a,
                 LimObj operator2
-
             )
         {
             ///
@@ -2077,6 +2480,25 @@ namespace Lima_LimaPlusPlus_interpreter
             /// StrCatear
             ///
             if (a == "StrCat=") return operator1 + operator2;
+
+            ///
+            /// nueva linea
+            ///
+            if (a == "Line+=") return operator1 + "\n" + operator2;
+
+            ///
+            /// repetir
+            ///
+            if (a == "Repeat=")
+            {
+                string result = "";
+                for (
+                    int i = 0; i < int.Parse(operator2); i++
+                    )
+                {
+                    result += operator1;
+                }
+            }
 
             ///
             /// sumar
@@ -2208,6 +2630,38 @@ namespace Lima_LimaPlusPlus_interpreter
                 return (int.Parse(operator1) ^ int.Parse(operator2)).ToString();
             }
 
+            ///
+            /// yxo_contains
+            ///
+            if (a == "++^^")
+            {
+                if (
+                    !LimaPlusPlus
+                    ) return "?";
+
+                ///
+                /// los 2 son string
+                ///
+                if (
+                    int.TryParse(operator1, out int value1) == false &&
+                    int.TryParse(operator2, out int value2) == false
+                    )
+                {
+                    return BoolToLimaBool(operator1.Contains(operator2));
+                }
+
+                ///
+                /// random
+                ///
+                if (
+                    int.TryParse(operator1, out value1) == true &&
+                    int.TryParse(operator2, out value2) == true
+                    )
+                {
+                    Random emm = new Random();
+                    return emm.Next(int.Parse(operator1) , int.Parse(operator2)).ToString();
+                }
+            }
 
             ///
             /// si nada es cierto , retornar el operador2 como ultimo recurso
@@ -2475,7 +2929,16 @@ namespace Lima_LimaPlusPlus_interpreter
                                     break;
                                         }
 
-                                class_body += lines[Line_to_execute].Trim() + "\n";
+                                if (
+                                    lines[Line_to_execute].Trim().StartsWith("expand class ")
+                                    )
+                                {
+                                    class_body += lima_variables[lines[Line_to_execute].Trim().Substring(13, lines[Line_to_execute].Trim().Length - 13) + "->class"] + "\n";
+                                }
+                                else
+                                {
+                                    class_body += lines[Line_to_execute].Trim() + "\n";
+                                }
 
                                 Line_to_execute++;
 
@@ -2523,6 +2986,22 @@ namespace Lima_LimaPlusPlus_interpreter
                                     ) {
                                     lima_variables[instance_name + "->class_functions"] = class_solved;
                                     lima_variables[instance_name] = LimaSyntax(lines[Line_to_execute + 2].Trim(), debug);
+
+                                    string[] declarations = class_solved.Replace("\r", "").Split("\n");
+
+                                    foreach (var item in declarations)
+                                    {
+                                        if (
+                                            item.Trim().StartsWith("declare var<")
+                                            )
+                                        {
+                                            string arry = item.Trim().Substring(11,item.Trim().Length-11);
+
+                                            string member_name = arry.Split(">")[0].Split("<")[1];
+
+                                            lima_variables[instance_name + "->" + member_name ] = arry.Split(":")[1];
+                                        }
+                                    }
                                 }
                                 else if (
                                     lines[Line_to_execute + 1].Trim() == "X="
@@ -2662,15 +3141,6 @@ namespace Lima_LimaPlusPlus_interpreter
                     segments[int.Parse((lines[Line_to_execute + 1]).Trim())] = script;
                 }
 
-                ///
-                /// si necesitamos importarlo desde otro script
-                ///
-                else if (
-                        (lines[Line_to_execute]).Trim() == "org import"
-                        )
-                {
-                    segments[int.Parse((lines[Line_to_execute + 2]).Trim())] = File.ReadAllText(Path.Join(globvars["@dircurrent"], LimaSyntax(lines[Line_to_execute + 1].Trim(), debug)));
-                }
                 ///
                 /// condicionales if
                 ///
@@ -2842,7 +3312,7 @@ namespace Lima_LimaPlusPlus_interpreter
                     /// globalizarla?
                     ///
                     if (
-                        (lines[Line_to_execute - 1]).Trim() == "[globalize]"
+                        Line_to_execute != 0 ? (lines[Line_to_execute - 1]).Trim() == "[globalize]" : false
                         )
                     {
                         globvars[VariablesSyntax(name)] = Operate_With(
@@ -2880,6 +3350,8 @@ namespace Lima_LimaPlusPlus_interpreter
                     ///
                     int section_search;
 
+                    int blocks_m = 0;
+
                     ///
                     /// buscar la seccion
                     ///
@@ -2889,7 +3361,7 @@ namespace Lima_LimaPlusPlus_interpreter
                         /// si encontro la palabra seccion
                         ///
                         if (
-                            lines[section_search].Trim() == "section"
+                            lines[section_search].Trim() == "section" && blocks_m == 0
                             )
                         {
                             if (
@@ -2936,6 +3408,18 @@ namespace Lima_LimaPlusPlus_interpreter
                                     Line_to_execute = section_search;
                                 }
                             }
+                        }
+                        else if (
+                            lines[section_search].Trim() == "{"
+                            )
+                        {
+                            blocks_m++;
+                        }
+                        else if (
+                            lines[section_search].Trim() == "}"
+                            )
+                        {
+                            blocks_m--;
                         }
                     }
                 }
@@ -3007,11 +3491,11 @@ namespace Lima_LimaPlusPlus_interpreter
 /// contribuidores, escritores , managers, y creditos de ejemplo0s
 /// 
 /// escrito por:
-///     Erick Antonio Nava Camarillo
+///     Erick
 ///     
 /// 
 /// manejado por:
-///     Erick Antonio Nava Camarillo
+///     Erick
 ///     
 /// 
 /// contribuidores:
@@ -3020,5 +3504,5 @@ namespace Lima_LimaPlusPlus_interpreter
 ///    
 /// 
 /// ejemplos escritos por:
-///     Erick Antonio Nava Camarillo
+///     Erick
 ///     
